@@ -4,4 +4,6 @@ class Blog < ApplicationRecord
     friendly_id :title, use: :slugged
     ##Validation presense field
     validates_presence_of :title, :body
+
+    belongs_to :topic
 end 
