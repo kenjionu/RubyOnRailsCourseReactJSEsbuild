@@ -4,11 +4,13 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "My Porfolio Blog"
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
-    @blogs = Blog.friendly.find(params[:id])
+    @page_title = @blog.title
+    # @blogs = Blog.friendly.find(params[:id])
 
   end
 
