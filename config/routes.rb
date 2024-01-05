@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :skills
   # get 'pages/home'
   get 'angular-items', to: 'portfolios#angular'
-  get 'porftfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   resources :blogs do
