@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "blogs", media: "all", "data-turbolinks-track": "reload" %>
+    <%= stylesheet_link_tag "blogs", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
@@ -15,14 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <section>
-      <section><%= link_to "Home", root_path %></section>
-      <section><%= link_to "About", about_me_path %></section>
-      <section><%= link_to "Contact", contact_path %></section>
-      <section><%= link_to "Blog", blogs_path %></section>
-      <section><%= link_to "Portfolio", portfolios_path %></section>
 
-    </section>
 
       <% if current_user.is_a?(User) %>
         <%= link_to "Logout", destroy_user_session_path, data: { turbo_method: :delete } %>
@@ -31,6 +24,15 @@
         <%= link_to "Login", new_user_session_path, method: :get %>
       <% end %>
     <%= yield %>
+
+    <section>
+        <section><%= link_to "Home", root_path %></section>
+        <section><%= link_to "About", about_me_path %></section>
+        <section><%= link_to "Contact", contact_path %></section>
+        <section><%= link_to "Blog", blogs_path %></section>
+        <section><%= link_to "Portfolio", portfolios_path %></section>
+  
+      </section>
 
   <% if session[:source] %>
     <p>Thanks for visiting me from <%= session[:source] %></p>
