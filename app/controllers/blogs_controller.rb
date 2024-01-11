@@ -1,14 +1,16 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status ]
-
+  layout "blog"
   # GET /blogs or /blogs.json
   def index
     @blogs = Blog.all
+    @page_title = "My Porfolio Blog"
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
-    @blogs = Blog.friendly.find(params[:id])
+    @page_title = @blog.title
+    # @blogs = Blog.friendly.find(params[:id])
 
   end
 
