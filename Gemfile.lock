@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/kenjionu/cesar_view_tool
+  revision: 3f4d42848c1f54767f1cfc772de18608ca6eaaec
+  specs:
+    cesar_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -277,6 +283,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   capybara
+  cesar_view_tool!
   debug
   devise (~> 4.9, >= 4.9.3)
   friendly_id (~> 5.4)
