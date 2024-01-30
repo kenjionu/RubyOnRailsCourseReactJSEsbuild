@@ -15,7 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render "shared/nav", location: 'top' %>
+    <%= render "shared/application_nav", location: 'top' %>
 
     <!-- <%= login_helper %> -->
 
@@ -26,13 +26,13 @@
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
 
         <%= yield %>
+        <p class="text-center">© 2023 <label class="font-bold">Cesar Casares</label> con todos los derechos reservados</p>
 
       </div>
 
     </div>
     
     
-    <%= @copyright %>
 
     <%= source_helper("application") %>
   </body>
